@@ -16,9 +16,14 @@ class AdminController extends Controller
     
     public function dashboard()
     {
+
         return response()->json([
             'message' => 'Welcome to the Super Admin Dashboard',
             'user' => Auth::user(),
+            'data' => [
+                'businesses' => 100,
+                'students' => '150k',
+            ]
         ]);
     }
 }
